@@ -1,10 +1,10 @@
 .col-md-12
   %ul.nav.nav-tabs
     %li
-      %a{:href => "#"} About DMS
-    %li{:role => "presentation"}
-      %a{:href => "#"} Why DMS
-    %li.dropdown{:role => "presentation"}
+      %a{:href => "/"} About DMS
+    %li
+      %a{:href => "/why"} Why DMS
+    %li.dropdown
       %a.dropdown-toggle{"aria-expanded" => "false", "data-toggle" => "dropdown", :href => "#", :role => "button"}
         Our Services
         %span.caret
@@ -15,7 +15,9 @@
           %a{:href => "#"} XXXX
         %li
           %a{:href => "#"} XXXX
-    %li{:role => "presentation"}
-      %a{:href => "#"} DMS Trak
-    %li{:role => "presentation"}
-      %a{:href => "#"} Contact Us
+    %li
+      %a{:href => "/mydms"} My DMS
+    %li
+      %a{:href => "/trak"} DMS Trak
+    %li
+      %a{:href => "/contact"} Contact Us
