@@ -11,4 +11,25 @@ class PagesController < ApplicationController
   
   def mydms
   end
+  
+  def air
+  end
+  
+  def ocean
+  end
+  
+  def road
+  end
+  
+  def courier
+  end
+  
+  def couriers
+  end
+  
+  def fulfilment
+  end
+  
+  def express
+  end 
 end

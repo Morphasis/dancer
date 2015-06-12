@@ -16,6 +16,10 @@ h1 {
   font: bold 22px/1.2em "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", sans-serif;
   color: #333366;
 }
+h2 {
+  font: bold 15px/1.2em "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", sans-serif;
+  color: #009966;
+}
 .entry, .entry p {
   font: 300 14px/1.5em "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", sans-serif;
   color: #555555;
@@ -26,6 +30,7 @@ h1 {
 .text-norm{
   padding-left: 20px;
   font-size: 17.5px;
+  color: #555555;
 }
 .text-title{
   padding-left: 20px;
@@ -35,4 +40,11 @@ h1 {
 .nav{
   margin-top: 40px;
   margin-bottom: 40px;
+}
+//air freight
+.coverage{
+  text-align: center;
+  width: 100%;
+  height: 54px;
+  background-color: #00FF00;
 }

@@ -6,6 +6,13 @@ Rails.application.routes.draw do
   get '/trak' => 'pages#trak'
   get '/contact' => 'pages#contact'
   get '/mydms' => 'pages#mydms'
+  get '/air' => 'pages#air'
+  get '/ocean' => 'pages#ocean'
+  get '/road' => 'pages#road'
+  get '/courier' => 'pages#courier'
+  get '/couriers' => 'pages#couriers'
+  get 'fulfilment' => 'pages#fulfilment'
+  get 'express' => 'pages#express'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
