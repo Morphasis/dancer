@@ -9,6 +9,7 @@
     %header
       .container
         = image_tag('banner.jpg', :class => "banner")
+        =render '/home/navbar'
     %body
       .container
         = yield
