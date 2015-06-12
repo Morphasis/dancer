@@ -24,9 +24,6 @@ class PagesController < ApplicationController
   def courier
   end
   
-  def couriers
-  end
-  
   def fulfilment
   end
   

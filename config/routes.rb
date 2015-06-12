@@ -10,7 +10,6 @@ Rails.application.routes.draw do
   get '/ocean' => 'pages#ocean'
   get '/road' => 'pages#road'
   get '/courier' => 'pages#courier'
-  get '/couriers' => 'pages#couriers'
   get 'fulfilment' => 'pages#fulfilment'
   get 'express' => 'pages#express'
 
