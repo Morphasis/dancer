@@ -10,22 +10,22 @@
         %span.caret
       %ul.dropdown-menu{:role => "menu"}
         %li
-          %a{:href => "/air"} Air Freight
+          = link_to "Air Freight", air_path
         %li
-          %a{:href => "/ocean"} Ocean Frieght
+          = link_to "Ocean Frieght", ocean_path
         %li
-          %a{:href => "/road"} Road Freight
+          = link_to "Road Freight", road_path
         .divider
         %li
-          %a{:href => "/fulfilment"} Fulfilment Services
+          = link_to "Fulfilment Services", fulfilment_path
         %li
-          %a{:href => "/courier"} Courier Services
+          = link_to "Courier Services", courier_path
         .divider
         %li
-          %a{:href => "/express"} DMS Express
+          = link_to "DMS Express", express_path
     %li
-      %a{:href => "/mydms"} My DMS
+      = link_to "My DMS", mydms_path
     %li
-      %a{:href => "/trak"} DMS Trak
+      = link_to "DMS Trak", trak_path
     %li
-      %a{:href => "/contact"} Contact Us
+      = link_to "Contact Us", contact_path
