@@ -1,0 +1,20 @@
+.container
+  .contactform
+    = form_for @msg do |f|
+      Full Name:
+      %br
+      = f.text_field :name 
+      %br
+      Email:
+      %br
+      = f.text_field :emails
+      %br
+      Phone Number:
+      %br
+      = f.text_field :phone
+      %br
+      How can we help you ?
+      %br
+      = f.text_field :content, :class => 'content'
+      %br
+      = f.submit 'submit', :class => 'btn btn-primary'
