@@ -18,3 +18,15 @@
       = f.text_field :content, :class => 'content'
       %br
       = f.submit 'submit', :class => 'btn btn-primary'
+      
+Msgs:
+- @msgs.each do |msg|
+  %ul
+    %li=  msg.name
+    %br
+    %li=  msg.emails
+    %br
+    %li=  msg.content
+    %br
+    %li=  msg.phone
+    %br
