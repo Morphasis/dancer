@@ -1,32 +1,47 @@
-.container
-  .contactform
-    = form_for @msg do |f|
-      Full Name:
-      %br
-      = f.text_field :name 
-      %br
-      Email:
-      %br
-      = f.text_field :emails
-      %br
-      Phone Number:
-      %br
-      = f.text_field :phone
-      %br
-      How can we help you ?
-      %br
-      = f.text_field :content, :class => 'content'
-      %br
-      = f.submit 'submit', :class => 'btn btn-primary'
+.row
+  .col-md-12
+    .col-md-4
+      //Home page text
+      .text-title
+        %h1 DMS International Ltd.
+
+      .text-norm
+        %p London Heathrow: +44 (0)20 8897 1766
+        Suite 207, UCH House, Old Bath Road, Colnbrook, Berkshire SL3 0NW
+
+        %p London Gatwick: +44 (0)1293 772608
+        Unit 1, Bridge Industrial Estate, Balcombe Road, Horley, Surrey RH6 9HU
+    .col-md-8
+      %h1 Contact DMS International
       
-Msgs:
-- @msgs.each do |msg|
-  %ul
-    %li=  msg.name
-    %br
-    %li=  msg.emails
-    %br
-    %li=  msg.content
-    %br
-    %li=  msg.phone
-    %br
+      .contactform
+        = form_for @msg do |f|
+          Full Name:
+          %br
+          = f.text_field :name 
+          %br
+          Email:
+          %br
+          = f.text_field :emails
+          %br
+          Phone Number:
+          %br
+          = f.text_field :phone
+          %br
+          How can we help you ?
+          %br
+          = f.text_field :content, :class => 'content'
+          %br
+          = f.submit 'submit', :class => 'btn btn-primary'
+    
+    TEMP Msgs:
+    - @msgs.each do |msg|
+      %ul
+        =  msg.name
+        %br
+        =  msg.emails
+        %br
+        =  msg.content
+        %br
+        =  msg.phone
+        %br
