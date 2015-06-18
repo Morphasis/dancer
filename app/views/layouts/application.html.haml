@@ -10,6 +10,8 @@
       .container
         = image_tag('banner.jpg', :class => "banner")
         =render '/home/navbar'
+        %p.notice= notice
+        %p.alert= alert
     %body
       .container
         = yield
