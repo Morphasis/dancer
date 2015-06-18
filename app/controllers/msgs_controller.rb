@@ -7,7 +7,7 @@ class MsgsController < ApplicationController
   def create
     @msg = Msg.new(msg_params)
     if @msg.save
-      redirect_to new_msg_path
+      redirect_to msgcomp_path
     end
   end
   

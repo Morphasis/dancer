@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get '/courier' => 'pages#courier'
   get 'fulfilment' => 'pages#fulfilment'
   get 'express' => 'pages#express'
+  get 'msgcomp' => 'msgs#msgcomp'
 
   resources :msgs
 
