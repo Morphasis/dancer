@@ -26,6 +26,10 @@ gem 'bootstrap-sass'
 gem "haml-rails"
 
 gem 'devise'
+
+gem 'mail_form'
+gem 'simple_form'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
