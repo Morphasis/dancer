@@ -8,10 +8,14 @@
     = csrf_meta_tags
     %header
       .container
+        /Nav Bar and Banner
         = image_tag('banner.jpg', :class => "banner")
         =render '/home/navbar'
+
+        /alerts
         / %p.notice= notice
-        %p.alert= alert
+        / %p.alert= alert
+
         /contact alert
         - flash.each do |name, msg|
           - if msg.is_a?(String)
@@ -19,6 +23,13 @@
               %a.close{"data-dismiss" => "alert"}
                 &times;
               = content_tag :div, msg, :id => "flash_#{name}"
+
+        / User Login Data
+        - if user_signed_in?
+          Signed in as #{current_user.email}. Not you? #{link_to 'Sign out', destroy_user_session_path, :method => :delete}
+        - else
+          = link_to 'Sign up', new_user_registration_path
+          or #{link_to 'sign in', new_user_session_path}
     %body
       .container
         = yield
