@@ -10,7 +10,7 @@
       .container
         = image_tag('banner.jpg', :class => "banner")
         =render '/home/navbar'
-        %p.notice= notice
+        / %p.notice= notice
         %p.alert= alert
         /contact alert
         - flash.each do |name, msg|

@@ -14,8 +14,6 @@ Rails.application.routes.draw do
   get 'fulfilment' => 'pages#fulfilment'
   get 'express' => 'pages#express'
 
-  resources :msgs
-
   resources "contacts", only: [:new, :create]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
