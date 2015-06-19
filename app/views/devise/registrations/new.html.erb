@@ -11,28 +11,9 @@
   
   
   <div class="field">
-    <%= f.label :name %><br />
+    <%= f.label  :name %>
+    (First and last)<br />
     <%= f.email_field :name%>
-  </div>
-  <div class="field">
-    <%= f.label :address_line_1 %><br />
-    <%= f.email_field :address_line_1%>
-  </div>
-  <div class="field">
-    <%= f.label :address_line_2 %><br />
-    <%= f.email_field :address_line_2%>
-  </div>
-  <div class="field">
-    <%= f.label :postcode %><br />
-    <%= f.email_field :postcode%>
-  </div>
-  <div class="field">
-    <%= f.label :city %><br />
-    <%= f.email_field :city%>
-  </div>
-  <div class="field">
-    <%= f.label :country %><br />
-    <%= f.email_field :country %>
   </div>
   
   
@@ -51,7 +32,7 @@
   </div>
 
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit "Sign up", :class => 'btn btn-primary' %>
   </div>
 <% end %>
 
