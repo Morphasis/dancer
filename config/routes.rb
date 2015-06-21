@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   get 'home/index'
   root 'home#index'
   #pages
@@ -13,10 +13,19 @@ Rails.application.routes.draw do
   get '/courier' => 'pages#courier'
   get 'fulfilment' => 'pages#fulfilment'
   get 'express' => 'pages#express'
-  get 'admin' => 'dashboard#admindashboard'
   
   resources :dashboard
   resources "contacts", only: [:new, :create]
+
+  devise_for :users
+  as :user do
+    get 'users/edit' => 'devise/registrations#edit', :as => 'edit_user_registration'
+    put 'users' => 'devise/registrations#update', :as => 'user_registration'
+  end
+  #admin Pages
+  # get 'admin' => 'dashboard#admindashboard'
+  # get 'adminusers' => 'dashboard#adminuser'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
