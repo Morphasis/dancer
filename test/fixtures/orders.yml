@@ -1,0 +1,39 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  delivery_name: MyString
+  company_name: MyString
+  delivery_address1: MyString
+  delivery_address2: MyString
+  delivery_address3: MyString
+  delivery_city: MyString
+  delivery_postcode: MyString
+  delivery_country: MyString
+  phone: 1
+  package_contents: MyText
+  description_content: MyText
+  restricted_items: false
+  terms_conditions: false
+  insurance: false
+  contents_value: 
+  cf_reference: MyString
+  reference_number: MyString
+
+two:
+  delivery_name: MyString
+  company_name: MyString
+  delivery_address1: MyString
+  delivery_address2: MyString
+  delivery_address3: MyString
+  delivery_city: MyString
+  delivery_postcode: MyString
+  delivery_country: MyString
+  phone: 1
+  package_contents: MyText
+  description_content: MyText
+  restricted_items: false
+  terms_conditions: false
+  insurance: false
+  contents_value: 
+  cf_reference: MyString
+  reference_number: MyString

@@ -1,0 +1,40 @@
+.col-lg-12
+  %h1 New order
+  %h2 To place a new order we require some additional information please fill that in below:
+.col-sm-4
+  = simple_form_for @order do |f|
+    = f.input :delivery_name, :label => 'Delivery recipient full name', :required => true
+    %p
+    = f.input :company_name
+    %p
+    = f.input :delivery_address1, :label => 'Address line 1', :required => true
+    %p
+    = f.input :delivery_address2, :label => 'Address line 2'
+    %p
+    = f.input :delivery_address3, :label => 'Address line 3'
+    %p
+    = f.input :delivery_city, :label => 'City', :required => true
+    %p
+    = f.input :delivery_postcode, :label => 'postcode', :required => true
+    %p
+    = f.input :phone, :label => 'Contact/phone number', :required => true
+    %p
+    = f.input :package_contents, :label => 'A short summary of contence.', :required => true
+    %p
+    = f.input :description_content, :label => 'Description of contence.'
+    %br
+    = f.input :restricted_items, :label => 'I have read and agree to the restricted item list.', :required => true
+    %br
+    = f.input :terms_conditions, :label => 'I agree to the T&C.', :class => 'checkbox', :required => true
+    %br
+    = f.input :insurance, :label => 'If in need of insurance tick this box'
+    %br
+    = f.input :contents_value, :label => 'Estimated value'
+    %p
+    = f.input :cf_reference, :label => 'Consighnment refferance'
+    %p
+    = f.input :reference_number
+    %p
+    = f.button :submit
+    
+    / = f.input :delivery_country

@@ -22,6 +22,8 @@ Rails.application.routes.draw do
     get 'users/edit' => 'devise/registrations#edit', :as => 'edit_user_registration'
     put 'users' => 'devise/registrations#update', :as => 'user_registration'
   end
+  
+  resources "orders"
   #admin Pages
   # get 'admin' => 'dashboard#admindashboard'
   # get 'adminusers' => 'dashboard#adminuser'
