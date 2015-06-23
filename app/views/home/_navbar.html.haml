@@ -1,33 +1,45 @@
 .col-md-12
-  %ul.nav.nav-tabs
-    %li
-      %a{:href => "/"} About DMS
-    %li
-      %a{:href => "/why"} Why DMS
-    %li.dropdown
-      %a.dropdown-toggle{"aria-expanded" => "false", "data-toggle" => "dropdown", :href => "#", :role => "button"}
-        Our Services
-        %span.caret
-      %ul.dropdown-menu{:role => "menu"}
-        %li
-          = link_to "Air Freight", air_path
-        %li
-          = link_to "Ocean Frieght", ocean_path
-        %li
-          = link_to "Road Freight", road_path
-        .divider
-        %li
-          = link_to "Fulfilment Services", fulfilment_path
-        %li
-          = link_to "Courier Services", courier_path
-        .divider
-        %li
-          = link_to "DMS Express", express_path
-    %li
-      = link_to "My DMS", dashboard_index_path
-    %li
-      = link_to "DMS Trak", trak_path
-    %li
-      = link_to "Contact Us", new_contact_path
-    %li
-      = link_to "Admin", rails_admin_path
+  %nav.navbar.navbar-default
+    .container-fluid
+      / Brand and toggle get grouped for better mobile display
+      .navbar-header
+        %button.navbar-toggle.collapsed{"aria-expanded" => "false", "data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
+          %span.sr-only Toggle navigation
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+        %a.navbar-brand{:href => "#"} DMS
+      / Collect the nav links, forms, and other content for toggling
+      #bs-example-navbar-collapse-1.collapse.navbar-collapse
+        %ul.nav.navbar-nav
+          %li
+            %a{:href => "/"} About DMS
+          %li
+            %a{:href => "/why"} Why DMS
+          %li.dropdown
+            %a.dropdown-toggle{"aria-expanded" => "false", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+              Our Services
+              %span.caret
+            %ul.dropdown-menu{:role => "menu"}
+              %li
+                = link_to "Air Freight", air_path
+              %li
+                = link_to "Ocean Frieght", ocean_path
+              %li
+                = link_to "Road Freight", road_path
+              .divider
+              %li
+                = link_to "Fulfilment Services", fulfilment_path
+              %li
+                = link_to "Courier Services", courier_path
+              .divider
+              %li
+                = link_to "DMS Express", express_path
+          %li
+            = link_to "My DMS", dashboard_index_path
+          %li
+            = link_to "DMS Trak", trak_path
+          %li
+            = link_to "Contact Us", new_contact_path
+          %li
+            = link_to "Admin", rails_admin_path

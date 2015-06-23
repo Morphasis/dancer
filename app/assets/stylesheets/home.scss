@@ -37,14 +37,26 @@ h2 {
 //  padding-bottom: 10px;
 }
 //NAVBAR
-.nav{
-  margin-top: 40px;
-  margin-bottom: 40px;
-}
+//.nav{
+//  margin-top: 40px;
+//  margin-bottom: 40px;
+//}
 //air freight
 .coverage{
   text-align: center;
   width: 100%;
   height: 54px;
   background-color: #00FF00;
+}
+// Alerts
+.alert{
+  background-color: #99FF33;
+  opacity: 0.9;
+}
+// Nav Bar
+.navbar{
+  background-color: white;
+}
+.navbar-nav{
+  background-color: white;
 }
