@@ -1,40 +1,150 @@
 .col-lg-12
-  %h1 New order
-  %h2 To place a new order we require some additional information please fill that in below:
-.col-sm-4
-  = simple_form_for @order do |f|
-    = f.input :delivery_name, :label => 'Delivery recipient full name', :required => true
+  %h1 DMS INTERNATIONAL - CUSTOMER PORTAL & PACKAGE BOOKING PAGE
+  .text-norm.col-md-8
     %p
-    = f.input :company_name
+      Please use the form below to enter details of your package/s.
     %p
-    = f.input :delivery_address1, :label => 'Address line 1', :required => true
+      If you have any questions please call us on 01293 772608.
     %p
-    = f.input :delivery_address2, :label => 'Address line 2'
-    %p
-    = f.input :delivery_address3, :label => 'Address line 3'
-    %p
-    = f.input :delivery_city, :label => 'City', :required => true
-    %p
-    = f.input :delivery_postcode, :label => 'postcode', :required => true
-    %p
-    = f.input :phone, :label => 'Contact/phone number', :required => true
-    %p
-    = f.input :package_contents, :label => 'A short summary of contence.', :required => true
-    %p
-    = f.input :description_content, :label => 'Description of contence.'
-    %br
-    = f.input :restricted_items, :label => 'I have read and agree to the restricted item list.', :required => true
-    %br
-    = f.input :terms_conditions, :label => 'I agree to the T&C.', :class => 'checkbox', :required => true
-    %br
-    = f.input :insurance, :label => 'If in need of insurance tick this box'
-    %br
-    = f.input :contents_value, :label => 'Estimated value'
-    %p
-    = f.input :cf_reference, :label => 'Consighnment refferance'
-    %p
-    = f.input :reference_number
-    %p
-    = f.button :submit
-    
-    / = f.input :delivery_country
+      Use this form to order packages no larger than 175cm square and no heavier than 31Kg.
+      If your package/s are larger or heavier than this please call us on 01293 772608.
+/ .col-md-3.pull-right
+/   %h2 Quick Navigation
+/   %ul.nav.nav-pills.nav-stacked
+/     %li.active{:role => "presentation"}
+/       %a{:href => "Collection"} Collection
+/     %li{:role => "presentation"}
+/       %a{:href => "Delivery"} Delivery
+/     %li{:role => "presentation"}
+/       %a{:href => "Contence"} Contence
+
+.row
+  .col-md-8
+    .panel.panel-default
+      .panel-heading
+        %h3.panel-title Collection Address:
+        %span.pull-right.clickable
+          %i.glyphicon.glyphicon-chevron-up
+      .panel-body
+        %h2
+          Welcome,
+          = current_user.name
+          These are your current details.
+          %p
+          %font{:color => "red"} *If any of the fields are blank/wrong please fill them in in 
+          = link_to "Edit My Account", edit_user_registration_path
+          %p
+        %h2 Email:
+
+        = current_user.email
+
+        %h2 Full Name:
+
+        = current_user.name
+
+        %h2 Address Line 1:
+
+        = current_user.address_line_1
+
+        %h2 Address Line 2:
+
+        = current_user.address_line_2
+
+        %h2 Postcode:
+
+        = current_user.postcode
+
+        %h2 City:
+
+        = current_user.city
+
+        %h2 Country:
+
+        = current_user.country
+        %p
+
+
+.row
+  .col-md-8
+    .panel.panel-default
+      .panel-heading
+        %h3.panel-title Delivery Address:
+        %span.pull-right.clickable
+          %i.glyphicon.glyphicon-chevron-up
+      .panel-body
+        %h2 To place a new order we require some additional information please fill that in below:
+        = simple_form_for @order do |f|
+          = f.input :delivery_name, :label => 'Delivery recipient full name', :required => true
+          %p
+          = f.input :company_name
+          %p
+          = f.input :delivery_address1, :label => 'Address line 1', :required => true
+          %p
+          = f.input :delivery_address2, :label => 'Address line 2'
+          %p
+          = f.input :delivery_address3, :label => 'Address line 3'
+          %p
+          = f.input :delivery_city, :label => 'City', :required => true
+          %p
+          = f.input :delivery_postcode, :label => 'postcode', :required => true
+          %p
+          = f.input :phone, :label => 'Contact/phone number', :required => true
+%a{:href => "Contence"}
+.row
+  .col-md-8
+    .panel.panel-default
+      .panel-heading
+        %h3.panel-title Contence Details:
+        %span.pull-right.clickable
+          %i.glyphicon.glyphicon-chevron-up
+      .panel-body
+        = simple_form_for @order do |f|
+          %p
+          = f.input :package_contents, :label => 'A short summary of contence.', :required => true
+          %p
+          = f.input :description_content, :label => 'Description of contence.'
+          %br
+          = f.input :restricted_items, :label => 'I have read and agree to the restricted item list.', :required => true
+          %br
+          = f.input :terms_conditions, :label => 'I agree to the T&C.', :class => 'checkbox', :required => true
+          %br
+          = f.input :insurance, :label => 'If in need of insurance tick this box'
+          %br
+          = f.input :contents_value, :label => 'Estimated value'
+          %p
+          = f.input :cf_reference, :label => 'Consighnment refferance', :hint => 'This will be automatically entered'
+          %p
+          = f.input :reference_number
+          %p
+    = simple_form_for @order do |f|
+      = f.button :submit, :class => 'btn-primary'
+
+:css
+  .panel-heading span {
+      margin-top: -20px;
+      font-size: 15px;
+  }
+  .row {
+      margin-top: 40px;
+      padding: 0 10px;
+  }
+  .clickable {
+      cursor: pointer;
+  }
+:javascript
+  jQuery(function ($) {
+      $('.panel-heading span.clickable').on("click", function (e) {
+          if ($(this).hasClass('panel-collapsed')) {
+              // expand the panel
+              $(this).parents('.panel').find('.panel-body').slideDown();
+              $(this).removeClass('panel-collapsed');
+              $(this).find('i').removeClass('glyphicon-chevron-down').addClass('glyphicon-chevron-up');
+          }
+          else {
+              // collapse the panel
+              $(this).parents('.panel').find('.panel-body').slideUp();
+              $(this).addClass('panel-collapsed');
+              $(this).find('i').removeClass('glyphicon-chevron-up').addClass('glyphicon-chevron-down');
+          }
+      });
+  });
