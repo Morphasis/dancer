@@ -1,0 +1,63 @@
+.col-md-12
+  .admindash
+    %h1 Admin Dashboard
+    %h2 Welcome to the admin dashboard here you can see incoming and outgoing orders.
+
+.col-md-2
+  = link_to "Data Control", rails_admin_path, :class => 'btn-danger btn'
+  %p
+  .show_hide.btn-danger.btn Current Orders
+  .slidingDiv
+    %table.table.table-striped
+      %tr
+        %th Client Name
+        %th Delivery Name
+        %th Delivery company name
+        / %th Address line 1
+        / %th Address line 2
+        / %th Address line 3
+        / %th City
+        / %th postcode
+        %th phone
+        / %th Contents
+        / %th Description of contents
+        %th Restricted items
+        %th T&C
+        %th insurance
+        %th Package value
+        %th Consignment referance
+        / %th Ref number
+      - for order in @order
+        %tr
+          %td= current_user.name
+          %td= order.delivery_name
+          %td= order.company_name
+          / %td= order.delivery_address1
+          / %td= order.delivery_address2
+          / %td= order.delivery_address3
+          / %td= order.delivery_city
+          / %td= order.delivery_postcode
+          %td= order.phone
+          / %td= order.package_contents
+          / %td= order.description_content
+          %td= order.restricted_items
+          %td= order.terms_conditions
+          %td= order.insurance
+          %td= order.contents_value
+          %td= order.cf_reference
+          / %td= order.reference_number
+    %button.show_hide.btn.btn-primary hide
+  %p
+  = link_to "Back to Dashboard", :back, :class => 'btn-danger btn'
+
+:javascript
+  $(document).ready(function(){
+  
+  $(".slidingDiv").hide();
+  $(".show_hide").show();
+  
+  $('.show_hide').click(function(){
+  $(".slidingDiv").slideToggle();
+  });
+  
+  });

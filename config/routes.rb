@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   get 'express' => 'pages#express'
   
   resources :dashboard
+  get 'dadmin' => 'dashboard#dadmin'
   resources "contacts", only: [:new, :create]
 
   devise_for :users

@@ -13,6 +13,11 @@ class DashboardController < ApplicationController
     (current_user.nil?) ? redirect_to(root_path) : (redirect_to(root_path) unless current_user.admin?)
   end
   
+  def dadmin
+    (current_user.nil?) ? redirect_to(root_path) : (redirect_to(root_path) unless current_user.admin?)
+    @order = Order.all
+  end
+  
   def show
     @user = User.find(params[:id])
   end

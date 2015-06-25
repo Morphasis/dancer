@@ -88,7 +88,7 @@
         %p
         = f.input :delivery_postcode, :label => 'postcode', :required => true
         %p
-        = f.input :phone, :label => 'Contact/phone number', :required => true
+        = f.input :phone, :label => 'Contact/phone number', :required => true, :limit => 20
         %p
         = f.input :package_contents, :label => 'A short summary of contence.', :required => true
         %p
@@ -100,7 +100,7 @@
         %br
         = f.input :insurance, :label => 'If in need of insurance tick this box'
         %br
-        = f.input :contents_value, :label => 'Estimated value'
+        = f.input :contents_value, :label => 'Estimated value', :limit => 20
         %p
         = f.input :cf_reference, :label => 'Consighnment refferance', :hint => 'This will be automatically entered'
         %p
