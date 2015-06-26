@@ -23,6 +23,21 @@
 .numeric{
   width: 450px;
 }
+//table
+.tableScroll{
+    width:950px;
+    max-width:950px;
+    overflow-x:scroll;
+}
+//buton
+.btn-primary{
+  background-color: #00D174;
+}
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+  color: #fff;
+  background-color: #00D174;
+}
 //.control-label{
 ////  align: left;
 //  margin-top: 20px;
