@@ -44,10 +44,8 @@
                       %tr
                         - for order in @order
                           %tr
-                            - @users = User.all
-                            - @users.each do |user|
-                              %td= user.email
-                              %td= user.name
+                            %td= current_user.email
+                            %td= current_user.name
                             %td= order.delivery_name
                             %td= order.company_name
                             %td= order.delivery_address1
