@@ -5,15 +5,17 @@ class OrdersController < ApplicationController
   end
   
   def create
-    @order = Order.new(order_params)
+    @order = current_user.orders.new(order_params)
+    @order.email = current_user.email
     if @order.save
-      redirect_to confirmation_path
+      redirect_to dconfirmation_path
     end
   end
-  
+
   def order_params
     params.require(:order).
       permit(
+        :email,
         :delivery_name,
         :company_name,
         :delivery_address1,

@@ -26,7 +26,8 @@ Rails.application.routes.draw do
   end
   
   resources "orders"
-  get 'confirmation' => 'orders#confirmation'
+  get "/confirm" => "confirmations#show"
+  get 'dconfirmation' => 'orders#confirmation'
   #admin Pages
   # get 'admin' => 'dashboard#admindashboard'
   # get 'adminusers' => 'dashboard#adminuser'

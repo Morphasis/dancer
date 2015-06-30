@@ -64,8 +64,8 @@
                             %td= order.reference_number
   %p
   = link_to "Back to Dashboard", :back, :class => 'btn-danger btn'
-
-
+= order.user.name
+= order.user.email
 :javascript
   $(document).ready(function(){
   
