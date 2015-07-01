@@ -7,6 +7,12 @@ class OrdersController < ApplicationController
   def create
     @order = current_user.orders.new(order_params)
     @order.email = current_user.email
+    @order.name = current_user.name
+    @order.address_line_1 = current_user.address_line_1
+    @order.address_line_2 = current_user.address_line_2
+    @order.postcode = current_user.postcode
+    @order.city = current_user.city
+    @order.country = current_user.country
     if @order.save
       redirect_to dconfirmation_path
     end

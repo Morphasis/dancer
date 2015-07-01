@@ -59,9 +59,9 @@
   </div>
 <% end %>
 
-<h3>Cancel my account</h3>
+<h3>Delete my account</h3>
 
-<p>Unhappy? <%= button_to "Cancel my account", user_registration_path, data: { confirm: "Are you sure?" }, method: :delete %></p>
+<p> <%= button_to "Cancel my account", user_registration_path, data: { confirm: "Are you sure?" }, method: :delete, :class => 'btn btn-primary' %></p>
 
-<%= link_to "Back", :back %>
+<%= link_to "Back", :back, :class => 'btn btn-primary' %>
 </div>
