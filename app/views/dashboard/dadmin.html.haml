@@ -9,6 +9,8 @@
   .show_hide.btn-danger.btn Current Orders
   .slidingDiv
     - for order in @order
+      %h2
+        = order.user.name
       .orderpanel
         .clientarea
           Client name:
