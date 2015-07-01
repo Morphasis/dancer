@@ -38,13 +38,33 @@
   color: #fff;
   background-color: #00D174;
 }
-//.control-label{
-////  align: left;
-//  margin-top: 20px;
-//  margin-bottom: 1px;
-////  padding-bottom: 10px;
-//}
-//.booleon{
-//  align: right;
-//  margin-left: 10px;
-//}
+// Panel for orders
+.orderpanel{
+  background-color: lightgrey;
+  padding: 10px;
+  width: 680px;
+  margin: 2px;
+  border: ridge;
+  border-width: 5px;
+}
+.clientarea{
+  background-color: #00D174;
+  width: 650px;
+  border: solid;
+  border-width: 1px;
+  margin: 1px;
+}
+.delivarea{
+  margin: 1px;
+  background-color: #33DA90;
+  width: 650px;
+  border: solid;
+  border-width: 1px;
+}
+.tac{
+  margin: 1px;
+  background-color: #66E3AC;
+  width: 650px;
+  border: solid;
+  border-width: 1px;
+}
