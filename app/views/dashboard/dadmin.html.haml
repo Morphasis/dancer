@@ -22,52 +22,52 @@
           = order.user.address_line_2
         .delivarea
           %br
-          delivery_name
+          delivery_name:
           = order.delivery_name
           %br
-          company_name
+          company_name:
           = order.company_name
           %br
-          delivery_address1
+          delivery_address1:
           = order.delivery_address1
           %br
-          delivery_address2
+          delivery_address2:
           = order.delivery_address2
           %br
-          delivery_address3
+          delivery_address3:
           = order.delivery_address3
           %br
-          delivery_city
+          delivery_city:
           = order.delivery_city
           %br
-          delivery_postcode
+          delivery_postcode:
           = order.delivery_postcode
           %br
-          phone
+          phone:
           = order.phone
           %br
-          package_contents
+          package_contents:
           = order.package_contents
           %br
-          description_content
+          description_content:
           = order.description_content
           %br
-          contents_value
+          contents_value:
           = order.contents_value
           %br
-          cf_reference
+          cf_reference:
           = order.cf_reference
           %br
-          reference_number
+          reference_number:
           = order.reference_number
         .tac
-          restricted_items
+          restricted_items:
           = order.restricted_items
           %br
-          terms_conditions
+          terms_conditions:
           = order.terms_conditions
           %br
-          insurance
+          insurance:
           = order.insurance
   %p
   = link_to "Back to Dashboard", :back, :class => 'btn-danger btn'
