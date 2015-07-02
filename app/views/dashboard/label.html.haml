@@ -2,7 +2,8 @@
 - for order in @order
   .labeley
     %h2 DMS international
-    Client details:
+    Client Details:
+    %br
     %br
     Client name:
     = order.user.name
@@ -25,11 +26,18 @@
     %br
     %p
     %p
-    delivery details:
+    Delivery Details:
+    %br
+    %br
+    Delivery name:
     %br
     = order.delivery_name
     %br
+    Company name:
+    %br
     = order.company_name
+    %br
+    Delivery address:
     %br
     = order.delivery_address1
     %br
@@ -37,10 +45,13 @@
     %br
     = order.delivery_address3
     %br
+    city:
+    %br
     = order.delivery_city
     %br
+    
     = order.delivery_postcode
-    Consignment reference
+    Consignment reference:
     %br
     = order.id
     CR
