@@ -66,7 +66,8 @@
           = order.contents_value
           %br
           cf_reference:
-          = order.cf_reference
+          = order.id
+          CR
           %br
           reference_number:
           = order.reference_number
@@ -79,6 +80,7 @@
           %br
           insurance:
           = order.insurance
+          = order.id
   %p
   = link_to "Back to Dashboard", :back, :class => 'btn-danger btn'
 

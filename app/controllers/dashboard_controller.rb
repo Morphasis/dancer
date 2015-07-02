@@ -18,6 +18,10 @@ class DashboardController < ApplicationController
     @order = Order.all
   end
   
+  def myorders
+    @order = Order.where(current_user.id)
+  end
+  
   def show
     @user = User.find(params[:id])
   end

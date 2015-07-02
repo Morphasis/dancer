@@ -1,3 +1,75 @@
 .col-md-12
   %h1 my orders
-  
+- for order in @order
+  %h2
+    = order.user.name
+  .orderpanel
+    .clientarea
+      Client name:
+      = order.user.name
+      %br
+      Client email:
+      = order.user.email
+      %br
+      Client address ... -->:
+      %br
+      = order.user.address_line_1
+      %br
+      = order.user.address_line_2
+      %br
+      = order.user.postcode
+      %br
+      = order.user.city
+      %br
+      = order.user.country
+    .delivarea
+      %br
+      delivery_name:
+      = order.delivery_name
+      %br
+      company_name:
+      = order.company_name
+      %br
+      delivery_address1:
+      = order.delivery_address1
+      %br
+      delivery_address2:
+      = order.delivery_address2
+      %br
+      delivery_address3:
+      = order.delivery_address3
+      %br
+      delivery_city:
+      = order.delivery_city
+      %br
+      delivery_postcode:
+      = order.delivery_postcode
+      %br
+      phone:
+      = order.phone
+      %br
+      package_contents:
+      = order.package_contents
+      %br
+      description_content:
+      = order.description_content
+      %br
+      contents_value:
+      = order.contents_value
+      %br
+      cf_reference:
+      = order.id
+      CR
+      %br
+      reference_number:
+      = order.reference_number
+    .tac
+      restricted_items:
+      = order.restricted_items
+      %br
+      terms_conditions:
+      = order.terms_conditions
+      %br
+      insurance:
+      = order.insurance
+      = order.id
