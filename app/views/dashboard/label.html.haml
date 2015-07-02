@@ -40,4 +40,8 @@
     = order.delivery_city
     %br
     = order.delivery_postcode
-%a{:href => "#", :onclick => "window.print();return false;"} print me
+    Consignment reference
+    %br
+    = order.id
+    CR
+%button.btn.btn-primary{:href => "#", :onclick => "window.print();return false;"} print me
