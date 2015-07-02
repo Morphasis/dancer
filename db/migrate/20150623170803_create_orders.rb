@@ -9,13 +9,13 @@ class CreateOrders < ActiveRecord::Migration
       t.string :delivery_city
       t.string :delivery_postcode
       t.string :delivery_country
-      t.integer :phone
+      t.integer :phone, :limit => 20
       t.text :package_contents
       t.text :description_content
       t.boolean :restricted_items
       t.boolean :terms_conditions
       t.boolean :insurance
-      t.integer :contents_value
+      t.integer :contents_value, :limit => 20
       t.string :cf_reference
       t.string :reference_number
 
