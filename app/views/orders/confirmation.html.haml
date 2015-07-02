@@ -6,7 +6,7 @@
     / [Log Out] This will take the customer to the DMS website home page.
     %br
     %br
-    %button.btn.btn-primary Print Labels X
+    = link_to "Print Labels", label_path, :class => 'btn btn-primary'
     %br
     %br 
     = link_to "Place another order", new_order_path, :class => 'btn btn-primary'

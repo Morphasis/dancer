@@ -26,4 +26,8 @@ class DashboardController < ApplicationController
     @user = User.find(params[:id])
   end
   
+  def label
+    @order = current_user.orders
+  end
+  
 end

@@ -1,0 +1,41 @@
+%h1 labels
+- for order in @order
+  .labeley
+    %h2 DMS international
+    Client details:
+    %br
+    Client name:
+    = order.user.name
+    %br
+
+    Client email:
+    = order.user.email
+    %br
+    Client address ... -->:
+    %br
+    = order.user.address_line_1
+    %br
+    = order.user.address_line_2
+    %br
+    = order.user.postcode
+    %br
+    = order.user.city
+    %br
+    = order.user.country
+    %br
+
+    delivery details:
+    %br
+    = order.delivery_name
+    %br
+    = order.company_name
+    %br
+    = order.delivery_address1
+    %br
+    = order.delivery_address2
+    %br
+    = order.delivery_address3
+    %br
+    = order.delivery_city
+    %br
+    = order.delivery_postcode
