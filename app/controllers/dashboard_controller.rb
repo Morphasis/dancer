@@ -19,7 +19,8 @@ class DashboardController < ApplicationController
   end
   
   def myorders
-    @order = Order.where(user_id = current_user.id)
+    # @order = Order.where(user_id = current_user.id)
+    @order = Order.all
   end
   
   def show
