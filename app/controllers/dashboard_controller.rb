@@ -15,7 +15,8 @@ class DashboardController < ApplicationController
   
   def dadmin
     (current_user.nil?) ? redirect_to(root_path) : (redirect_to(root_path) unless current_user.admin?)
-    @order = Order.all
+    # @order = Order.all
+    @order = Order.paginate(:page => params[:page], :per_page => 3)
   end
   
   def myorders
