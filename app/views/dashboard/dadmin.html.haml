@@ -9,7 +9,7 @@
   = link_to "Back to Dashboard", :back, :class => 'btn-danger btn'
 .col-md-12
   - for order in @order
-  = will_paginate @order
+  = paginate @order
     %h2
       = order.user.name
     .orderpanel
