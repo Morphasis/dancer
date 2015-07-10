@@ -34,7 +34,7 @@ gem 'rails_admin'
 
 #pagetation
 gem 'kaminari'
-
+# gem 'kaminari-bootstrap'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
