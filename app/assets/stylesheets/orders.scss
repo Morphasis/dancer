@@ -40,31 +40,33 @@
 }
 // Panel for orders
 .orderpanel{
-  background-color: lightgrey;
   padding: 10px;
   width: 680px;
-  margin: 2px;
-  border: ridge;
-  border-width: 5px;
+  padding: 10px;
+  border: solid;
+  border-width: 2px;
+  border-color: #00D174;
 }
 .clientarea{
-  background-color: #00D174;
-  width: 650px;
+  padding: 10px;
   border: solid;
-  border-width: 1px;
+  border-width: 2px;
+  border-color: #00D174;
   margin: 1px;
 }
 .delivarea{
   margin: 1px;
-  background-color: #33DA90;
-  width: 650px;
+  margin: 0 auto;
+  padding: 10px;
   border: solid;
-  border-width: 1px;
+  border-width: 2px;
+  border-color: #00D174;
 }
 .tac{
   margin: 1px;
-  background-color: #66E3AC;
-  width: 650px;
+  margin: 0 auto;
+  padding: 10px;
   border: solid;
-  border-width: 1px;
+  border-width: 2px;
+  border-color: #00D174;
 }
