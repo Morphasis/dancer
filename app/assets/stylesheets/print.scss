@@ -1,0 +1,9 @@
+//Div printing
+@media print {
+  header, nav, footer, h1, .pagination, .btn, .html {
+  display: none;
+  }
+}
+@page {
+  margin: 0px;
+}

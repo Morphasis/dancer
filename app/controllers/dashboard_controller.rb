@@ -28,7 +28,7 @@ class DashboardController < ApplicationController
   end
   
   def label
-    @order = current_user.orders
+    @order = current_user.orders.order("name").page(params[:page]).per(1)
   end
   
 end

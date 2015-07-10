@@ -1,21 +1,20 @@
 %h1 labels
 - for order in @order
+= paginate @order
   .labeley
     %h2 DMS international
     Client Details:
     %br
-    %br
     Client name:
     = order.user.name
     %br
-
     Client email:
     = order.user.email
     %br
     Client address ... -->:
     %br
     = order.user.address_line_1
-    %br
+    ,
     = order.user.address_line_2
     %br
     = order.user.postcode
@@ -24,17 +23,12 @@
     %br
     = order.user.country
     %br
-    %p
-    %p
     Delivery Details:
     %br
-    %br
     Delivery name:
-    %br
     = order.delivery_name
     %br
     Company name:
-    %br
     = order.company_name
     %br
     Delivery address:
@@ -45,14 +39,11 @@
     %br
     = order.delivery_address3
     %br
-    city:
-    %br
     = order.delivery_city
     %br
     = order.delivery_postcode
     %br
     Consignment reference:
-    %br
     = order.id
     CR
 %button.btn.btn-primary{:href => "#", :onclick => "window.print();return false;"} print me
