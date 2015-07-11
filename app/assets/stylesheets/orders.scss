@@ -35,7 +35,7 @@
 }
 
 .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
-  color: #fff;
+  color: black;
   background-color: #00D174;
 }
 // Panel for orders
@@ -52,28 +52,31 @@
 .clientarea{
   background-color: white;
   padding: 10px;
-  border: solid;
-  border-width: 2px;
   border-color: #008248;
-  margin: 1px;
+  border-top:    8px solid #008248;
+  border-bottom: 2px dotted #008248;
+  border-right:  2px dotted black;
+  border-left:  2px dotted black;
 }
 .delivarea{
   background-color: white;
   margin: 1px;
   margin: 0 auto;
   padding: 10px;
-  border: solid;
-  border-width: 2px;
+  border-bottom: 2px dotted #008248;
   border-color: #008248;
+  border-right:  2px dotted black;
+  border-left:  2px dotted black;
 }
 .tac{
   background-color: white;
   margin: 1px;
   margin: 0 auto;
   padding: 10px;
-  border: solid;
-  border-width: 2px;
+  border-bottom: 8px solid #008248;
   border-color: #008248;
+  border-right:  2px dotted black;
+  border-left:  2px dotted black;
 }
 .sidebar{
   background-color: #D3FFED;
