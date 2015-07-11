@@ -4,7 +4,6 @@
     They are displayed from oldest to newest. If you wish to cancel a order please contact DMS on ops@dms-intl.com or call 01293 772608.
 .col-md-8
   - for order in @order
-  = paginate @order
     %h2
       = order.user.name
     .orderpanel
@@ -77,4 +76,5 @@
         = order.insurance
 .col-md-4
   .sidebar
+    = paginate @order
     = link_to "Print Labels", label_path, :class => 'btn btn-primary'
