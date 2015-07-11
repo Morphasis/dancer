@@ -20,7 +20,7 @@ class DashboardController < ApplicationController
   end
   
   def myorders
-    @order = current_user.orders
+    @order = current_user.orders.order("name").page(params[:page]).per(1)
   end
   
   def show
