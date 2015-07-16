@@ -94,9 +94,9 @@
         %p
         = f.input :description_content, :label => 'Description of contents.'
         %br
-        = f.input :restricted_items, :label => 'I have read and agree to the restricted item list.', :required => true
+        = f.input :restricted_items, :label => 'I have read and agree to the restricted item list.', :required => true, :input_html => { :checked => true }
         %br
-        = f.input :terms_conditions, :label => 'I agree to the T&C.', :class => 'checkbox', :required => true
+        = f.input :terms_conditions, :label => 'I agree to the T&C.', :class => 'checkbox', :required => true, :input_html => { :checked => true }
         %br
         = f.input :insurance, :label => 'If in need of insurance tick this box'
         %br
