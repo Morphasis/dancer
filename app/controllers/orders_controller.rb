@@ -38,7 +38,8 @@ class OrdersController < ApplicationController
         :insurance,
         :contents_value,
         :cf_reference,
-        :reference_number
+        :reference_number,
+        :service
         )
   end
   def show

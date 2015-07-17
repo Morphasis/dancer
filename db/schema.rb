@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150630190557) do
+ActiveRecord::Schema.define(version: 20150717124352) do
 
   create_table "messages", force: :cascade do |t|
     t.string   "name"
@@ -50,8 +50,8 @@ ActiveRecord::Schema.define(version: 20150630190557) do
     t.integer  "contents_value"
     t.string   "cf_reference"
     t.string   "reference_number"
-    t.datetime "created_at",          null: false
-    t.datetime "updated_at",          null: false
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
     t.integer  "user_id"
     t.string   "name"
     t.string   "address_line_1"
@@ -60,6 +60,9 @@ ActiveRecord::Schema.define(version: 20150630190557) do
     t.string   "city"
     t.string   "country"
     t.string   "email"
+    t.boolean  "complete",            default: false
+    t.datetime "completed_at"
+    t.string   "service"
   end
 
   create_table "products", force: :cascade do |t|

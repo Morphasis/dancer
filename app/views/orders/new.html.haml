@@ -104,6 +104,8 @@
         %p
         / = f.input :cf_reference, :label => 'Consignment reference', :hint => 'This will be automatically entered'
         %p
+        = f.input :service, :label => 'Service Level', :required => true, :as => :select, :collection => [['DMS Express', 'DMS Express'], ['DMS 10.00', 'DMS 10.00'], ['DMS 12.00', 'DMS 12.00'], ['DMS Saturday & Sunday', 'DMS Saturday & Sunday']]
+        %p
         = f.input :reference_number
         %p
         = f.button :submit, :class => 'btn-primary'
