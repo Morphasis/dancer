@@ -30,7 +30,8 @@ gem 'devise'
 gem 'mail_form'
 gem 'simple_form'
 
-gem 'rails_admin'
+gem 'activeadmin', '~> 1.0.0.pre1'
+gem 'country_select'
 
 #pagetation
 gem 'kaminari'
