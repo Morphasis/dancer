@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   ActiveAdmin.register User do
-    permit_params :email, :password
+    permit_params(:name, :email, :password_digest, :remember_token)
   end
   after_create
 
