@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150720113153) do
+ActiveRecord::Schema.define(version: 20150727125106) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -93,9 +93,9 @@ ActiveRecord::Schema.define(version: 20150720113153) do
     t.string   "city"
     t.string   "country"
     t.string   "email"
-    t.boolean  "complete",            default: false
     t.datetime "completed_at"
     t.string   "service"
+    t.boolean  "complete",            default: false
   end
 
   create_table "products", force: :cascade do |t|
