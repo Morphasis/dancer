@@ -6,6 +6,7 @@ ActiveAdmin.register_page "Dashboard" do
         link_to order.delivery_name, [:admin, order]
       end
       column :created_at
+      column :complete
     end
   end
 end
