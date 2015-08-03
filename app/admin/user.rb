@@ -8,15 +8,15 @@ ActiveAdmin.register User do
   # or
   #
   permit_params do
-    permitted = [:username, :password, :password_confirmation]
+    permitted = [:username, :password, :password_confirmation, :name, :admin]
     permitted
   end
 
   index do
     selectable_column
     column :email
-    column :password
     column :name
+    column :admin
     actions
   end
 
@@ -24,8 +24,9 @@ ActiveAdmin.register User do
       f.inputs "User" do
         f.input :email
         f.input :name
-        f.input :password, :required => true
-        f.input :password_confirmation, :required => true
+        f.input :admin
+        f.input :password
+        f.input :password_confirmation
       end
       f.actions
     end

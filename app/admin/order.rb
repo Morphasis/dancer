@@ -1,5 +1,5 @@
 ActiveAdmin.register Order do
-  scope :complete
+  scope :not_completed_orders
 
   action_item :add do
     link_to "Get Manifest", "/admin/orders.csv"
@@ -14,7 +14,6 @@ ActiveAdmin.register Order do
     column :delivery_address2
     actions
   end
-
 
   csv do
     column :delivery_name

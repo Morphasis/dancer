@@ -7,26 +7,26 @@
   .col-md-8
     - for order in @order
       %h2
-        = order.user.name
+        = order.user.name if order.user
       .orderpanel
         .clientarea
           Client name:
-          = order.user.name
+          = order.user.name if order.user
           %br
           Client email:
-          = order.user.email
+          = order.user.email if order.user
           %br
           Client address ... -->:
           %br
-          = order.user.address_line_1
+          = order.user.address_line_1 if order.user
           %br
-          = order.user.address_line_2
+          = order.user.address_line_2 if order.user
           %br
-          = order.user.postcode
+          = order.user.postcode if order.user
           %br
-          = order.user.city
+          = order.user.city if order.user
           %br
-          = order.user.country
+          = order.user.country if order.user
         .delivarea
           delivery_name:
           = order.delivery_name
@@ -82,6 +82,7 @@
           = order.id
   .col-md-4.sidebar
     = paginate @order
-    = link_to "Data Control", rails_admin_path, :class => 'btn-danger btn'
+    %p
+    = link_to "Data Control", admin_dashboard_path, :class => 'btn-danger btn'
     %p
     = link_to "Back to Dashboard", :back, :class => 'btn-danger btn'

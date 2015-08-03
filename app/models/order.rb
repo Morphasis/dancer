@@ -1,6 +1,6 @@
 class Order < ActiveRecord::Base
   belongs_to :user
-  scope :complete, -> {
-    where(:complete => nil)
+  scope :not_completed_orders, -> {
+    where(:complete => false)
   }
 end
