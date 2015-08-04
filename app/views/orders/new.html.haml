@@ -23,9 +23,9 @@
   .panel.panel-default
     .panel-heading
       %h3.panel-title Collection Address:
-      %span.pull-right.clickable
-        %i.glyphicon.glyphicon-chevron-up
-    .panel-body
+      %span.pull-right.clickable.panel-collapsed
+        %i.glyphicon.glyphicon-chevron-down
+    .panel-body.panel-collapsed{:style => "display: none;"}
       %h2
         Welcome,
         = current_user.name
