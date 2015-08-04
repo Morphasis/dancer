@@ -77,7 +77,7 @@
         = f.input :delivery_name, :label => 'Delivery recipient full name', :required => true
         %p
         = f.input :company_name
-        %p
+        %p 
         = f.input :delivery_address1, :label => 'Address line 1', :required => true
         %p
         = f.input :delivery_address2, :label => 'Address line 2'
@@ -86,6 +86,7 @@
         %p
         = f.input :delivery_city, :label => 'City', :required => true
         %p
+        = link_to "Check Address Through Postcode", "www.royalmail.com/find-a-postcode"
         = f.input :delivery_postcode, :label => 'postcode', :required => true
         %p
         = f.input :phone, :label => 'Contact/phone number', :required => true, :limit => 12
