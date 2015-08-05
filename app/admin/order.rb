@@ -15,7 +15,6 @@ ActiveAdmin.register Order do
     column :delivery_address1
     column :service
     column :insurance
-    column download_links: [:csv]
     actions
   end
 
