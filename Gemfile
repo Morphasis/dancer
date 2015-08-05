@@ -30,8 +30,10 @@ gem 'devise'
 gem 'mail_form'
 gem 'simple_form'
 
+# active admin stuff
 gem 'activeadmin', '~> 1.0.0.pre1'
 gem 'country_select'
+gem 'flattened_active_admin'
 
 #pagetation
 gem 'kaminari'
