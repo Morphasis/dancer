@@ -1,8 +1,8 @@
 ActiveAdmin.register Order do
   scope :not_completed_orders
 
-  action_item :add do
-    link_to "Get Manifest", "/admin/orders.csv"
+  batch_action :manifest do |ids|
+    redirect_to "/admin/orders.csv?q[id_in][]=" + ids.join("&q[id_in][]=")
   end
 
   index do
