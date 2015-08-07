@@ -1,6 +1,6 @@
 ActiveAdmin.register Order do
   scope :not_completed_orders
-
+  menu priority: 3
   batch_action :manifest do |ids|
     redirect_to "/admin/orders.csv?q[id_in][]=" + ids.join("&q[id_in][]=")
   end
