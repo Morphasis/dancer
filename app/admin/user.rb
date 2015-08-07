@@ -8,7 +8,7 @@ ActiveAdmin.register User do
   # or
   #
   permit_params do
-    permitted = [email:, :username, :password, :password_confirmation, :name, :admin]
+    permitted = [:username, :password, :password_confirmation, :name, :admin, :email]
     permitted
   end
 
