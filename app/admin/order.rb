@@ -19,9 +19,10 @@ ActiveAdmin.register Order do
   end
 
   csv do
+    column :created_at
     column :name
     column :delivery_name
-    column :id 
+    column :id
   end
 
   permit_params do
