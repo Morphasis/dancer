@@ -19,10 +19,12 @@ ActiveAdmin.register Order do
   end
 
   csv do
-    column :created_at
-    column :name
-    column :delivery_name
-    column :id
+    column("Order Placed On"){ |order| order.created_at }
+    column("Client Name"){ |order| order.name }
+    column("Delivery Recipient Name"){ |order| order.delivery_name }
+    column "ID" do |user|
+      "#{user.id} CF" 
+    end
   end
 
   permit_params do
