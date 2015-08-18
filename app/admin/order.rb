@@ -22,8 +22,8 @@ ActiveAdmin.register Order do
     column("Order Placed On"){ |order| order.created_at }
     column("Client Name"){ |order| order.name }
     column("Delivery Recipient Name"){ |order| order.delivery_name }
-    column "ID" do |user|
-      "#{user.id} CF" 
+    column "Consignment Reference number" do |user|
+      "#{user.id} CR" 
     end
   end
 
