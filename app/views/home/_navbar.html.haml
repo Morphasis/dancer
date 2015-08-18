@@ -13,31 +13,14 @@
       #bs-example-navbar-collapse-1.collapse.navbar-collapse
         %ul.nav.navbar-nav
           %li
-            %a{:href => "/"} About DMS
+            %a.pull-right{:href => "http://dms-intl.com/"} Back To Main Site
           %li
-            %a{:href => "/why"} Why DMS
-          %li.dropdown
-            %a.dropdown-toggle{"aria-expanded" => "false", "data-toggle" => "dropdown", :href => "#", :role => "button"}
-              Our Services
-              %span.caret
-            %ul.dropdown-menu{:role => "menu"}
-              %li
-                = link_to "Air Freight", air_path
-              %li
-                = link_to "Ocean Frieght", ocean_path
-              %li
-                = link_to "Road Freight", road_path
-              .divider
-              %li
-                = link_to "Fulfilment Services", fulfilment_path
-              %li
-                = link_to "Courier Services", courier_path
-              .divider
-              %li
-                = link_to "DMS Express", express_path
+            - if user_signed_in?
+              %a #{current_user.email}
           %li
-            = link_to "My DMS", dashboard_index_path
-          %li
-            = link_to "DMS Trak", trak_path
-          %li
-            = link_to "Contact Us", new_contact_path
+            / User Login Data
+            - if user_signed_in?
+              #{link_to 'Sign out', destroy_user_session_path, :method => :delete}
+            - else
+              / = link_to 'Sign up', new_user_registration_path
+              #{link_to 'sign in', new_user_session_path}
