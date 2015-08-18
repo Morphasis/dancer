@@ -13,6 +13,8 @@
       #bs-example-navbar-collapse-1.collapse.navbar-collapse
         %ul.nav.navbar-nav
           %li
+            %a.pull-right{:href => "http://dms-intl.herokuapp.com/dashboard"} My DMS
+          %li
             %a.pull-right{:href => "http://dms-intl.com/"} Back To Main Site
           %li
             - if user_signed_in?
