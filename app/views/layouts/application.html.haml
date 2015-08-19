@@ -12,7 +12,12 @@
         /Nav Bar and Banner
         = image_tag('banner.jpg', :class => "banner img-responsive")
         =render '/home/navbar'
-
+        .col-md-12
+          .logged
+            - if user_signed_in?
+              #{current_user.email} Not you ? #{link_to 'Sign out', destroy_user_session_path, :method => :delete}
+            - else
+              #{link_to 'sign in', new_user_session_path}
         /alerts
         / %p.notice= notice
         / %p.alert= alert
