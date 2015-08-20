@@ -48,7 +48,7 @@ ActiveRecord::Schema.define(version: 20150727125106) do
 
   create_table "messages", force: :cascade do |t|
     t.string   "name"
-    t.string   "phone"
+    t.string   "phone", limit: 20
     t.string   "email"
     t.string   "subject"
     t.text     "content"
@@ -74,13 +74,13 @@ ActiveRecord::Schema.define(version: 20150727125106) do
     t.string   "delivery_city"
     t.string   "delivery_postcode"
     t.string   "delivery_country"
-    t.integer  "phone"
+    t.integer  "phone", limit: 20
     t.text     "package_contents"
     t.text     "description_content"
     t.boolean  "restricted_items"
     t.boolean  "terms_conditions"
     t.boolean  "insurance"
-    t.integer  "contents_value"
+    t.integer  "contents_value", limit: 20
     t.string   "cf_reference"
     t.string   "reference_number"
     t.datetime "created_at",                          null: false
