@@ -3,18 +3,8 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   # mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   get 'home/index'
-  root 'home#index'
-  #pages
-  get '/why' => 'pages#why'
-  get '/trak' => 'pages#trak'
-  get '/contact' => 'pages#contact'
-  get '/mydms' => 'pages#mydms'
-  get '/air' => 'pages#air'
-  get '/ocean' => 'pages#ocean'
-  get '/road' => 'pages#road'
-  get '/courier' => 'pages#courier'
-  get 'fulfilment' => 'pages#fulfilment'
-  get 'express' => 'pages#express'
+  root 'dashboard#index'
+
   
   resources :dashboard
   get 'dadmin' => 'dashboard#dadmin'

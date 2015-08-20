@@ -8,9 +8,15 @@
           %span.icon-bar
           %span.icon-bar
           %span.icon-bar
-        %a.navbar-brand{:href => "http://dms-intl.com/"} DMS
+        %a.navbar-brand{:href => "/"} DMS
       / Collect the nav links, forms, and other content for toggling
       #bs-example-navbar-collapse-1.collapse.navbar-collapse
         %ul.nav.navbar-nav
           %li
             %a.pull-right{:href => "http://dms-intl.com/"} Back To Main Site
+          %li
+            .logged.pull-right
+              - if user_signed_in?
+                #{current_user.email} Not you ? #{link_to 'Sign out', destroy_user_session_path, :method => :delete}
+              - else
+                #{link_to 'sign in', new_user_session_path}
