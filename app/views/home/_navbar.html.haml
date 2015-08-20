@@ -13,9 +13,9 @@
       #bs-example-navbar-collapse-1.collapse.navbar-collapse
         %ul.nav.navbar-nav
           %li
-            %a.pull-right{:href => "http://dms-intl.com/"} Back To Main Site
+            %a{:href => "http://dms-intl.com/"} Back To Main Site
           %li
-            .logged.pull-right
+            .logged
               - if user_signed_in?
                 #{current_user.email} Not you ? #{link_to 'Sign out', destroy_user_session_path, :method => :delete}
               - else
