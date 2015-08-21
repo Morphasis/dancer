@@ -3,7 +3,7 @@ class OrdersController < ApplicationController
   def new
     @order = Order.new
   end
-  
+
   def create
     @order = current_user.orders.new(order_params)
     @order.email = current_user.email
@@ -45,8 +45,8 @@ class OrdersController < ApplicationController
   def show
     @user = User.find(params[:id])
   end
-  
+
   def confirmation
   end
-  
+
 end

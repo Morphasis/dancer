@@ -78,16 +78,32 @@
         %p
         = f.input :company_name
         %p 
-        = f.input :delivery_address1, :label => 'Address line 1', :required => true
+        = f.input :delivery_address1, :input_html => { :id => "first_line" }, :label => 'Address line 1', :required => true
         %p
-        = f.input :delivery_address2, :label => 'Address line 2'
+        = f.input :delivery_address2, :input_html => { :id => "second_line" }, :label => 'Address line 2'
         %p
-        = f.input :delivery_address3, :label => 'Address line 3'
+        = f.input :delivery_address3, :input_html => { :id => "third_line" }, :label => 'Address line 3'
         %p
-        = f.input :delivery_city, :label => 'City', :required => true
+        = f.input :delivery_city, :input_html => { :id => "post_town" }, :label => 'City', :required => true
         %p
-        = link_to "Check Address Through Postcode", "www.royalmail.com/find-a-postcode"
-        = f.input :delivery_postcode, :label => 'postcode', :required => true
+        = f.input :delivery_postcode, :input_html => { :id => "postcode" }, :label => 'postcode', :required => true, :placeholder => 'Don’t enter postcode here if you intend to use find my address.'
+        %p
+        #postcode_lookup_field
+        :javascript
+          $('#postcode_lookup_field').setupPostcodeLookup({
+              // Set your API key
+              api_key: 'ak_idks8a8h7ZGzRUWMOngHE5c7SBLhC',
+              // Pass in CSS selectors pointing to your input fields to pipe the results
+              output_fields: {
+                  line_1: '#first_line',  
+                  line_2: '#second_line',         
+                  line_3: '#third_line',
+                  post_town: '#post_town',
+                  postcode: '#postcode'
+              },
+              button_class: 'btn-primary btn',
+              input_class: 'postcode'
+          });
         %p
         = f.input :phone, :label => 'Contact/phone number', :required => true, :limit => 12
         %p
