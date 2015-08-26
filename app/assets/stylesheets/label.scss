@@ -1,10 +1,29 @@
 // Styling for labels
 .labeley{
-  padding: 2px;
   width: 100%;
   max-width: 400px;
 //  background-color: lightgrey;
 //  margin: 10px;
   border: double;
   border-width: 2px;
+}
+.label-title{
+  margin: 0 auto;
+  text-align: center;
+}
+.label-client{
+  border-top: dotted;
+  border-bottom: dotted;
+  border-width: 1px;
+  padding: 2px;
+}
+.label-cr{
+  width: 75px;
+  border: solid;
+  border-width: 1px;
+  text-align: right;
+  margin-bottom: 20px;
+}
+.label-del{
+  padding: 2px;
 }
