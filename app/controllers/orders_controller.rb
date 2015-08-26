@@ -21,6 +21,7 @@ class OrdersController < ApplicationController
   def order_params
     params.require(:order).
       permit(
+        :pieces,
         :email,
         :delivery_name,
         :company_name,

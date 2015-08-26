@@ -14,6 +14,7 @@ ActiveAdmin.register Order do
     column :complete
     column :delivery_address1
     column :service
+    column :pieces
     column :insurance
     actions
   end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150727125106) do
+ActiveRecord::Schema.define(version: 20150826130752) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -48,7 +48,7 @@ ActiveRecord::Schema.define(version: 20150727125106) do
 
   create_table "messages", force: :cascade do |t|
     t.string   "name"
-    t.string   "phone", limit: 8
+    t.string   "phone"
     t.string   "email"
     t.string   "subject"
     t.text     "content"
@@ -74,13 +74,13 @@ ActiveRecord::Schema.define(version: 20150727125106) do
     t.string   "delivery_city"
     t.string   "delivery_postcode"
     t.string   "delivery_country"
-    t.integer  "phone", limit: 8
+    t.integer  "phone"
     t.text     "package_contents"
     t.text     "description_content"
     t.boolean  "restricted_items"
     t.boolean  "terms_conditions"
     t.boolean  "insurance"
-    t.integer  "contents_value", limit: 8
+    t.integer  "contents_value"
     t.string   "cf_reference"
     t.string   "reference_number"
     t.datetime "created_at",                          null: false
@@ -96,6 +96,7 @@ ActiveRecord::Schema.define(version: 20150727125106) do
     t.datetime "completed_at"
     t.string   "service"
     t.boolean  "complete",            default: false
+    t.string   "pieces"
   end
 
   create_table "products", force: :cascade do |t|
