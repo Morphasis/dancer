@@ -42,7 +42,8 @@
       service level:
       = order.service
       %br
-      Consignment reference:
-      = order.id
-      CR
+      .pull-right
+        __ /
+        = order.pieces
+        Pieces
 %button.btn.btn-primary{:href => "#", :onclick => "window.print();return false;"} print me
