@@ -42,9 +42,10 @@
       service level:
       = order.service
       %br
-    .pull-right.label-cr
-      __ /
-      = order.pieces
-      Pieces
+    -if !order.pieces.nil?
+      .pull-right.label-pc
+        __ /
+        = order.pieces
+        Pieces
 %br
 %button.btn.btn-primary{:href => "#", :onclick => "window.print();return false;"} print me
