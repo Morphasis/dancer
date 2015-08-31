@@ -42,8 +42,9 @@
       service level:
       = order.service
       %br
-      .pull-right
+      .pull-right.label-cr
         __ /
         = order.pieces
         Pieces
+%br
 %button.btn.btn-primary{:href => "#", :onclick => "window.print();return false;"} print me
