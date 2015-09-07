@@ -6,6 +6,13 @@ class OrdersController < ApplicationController
 
   def create
     @order = current_user.orders.new(order_params)
+    if @order.deliver
+      flash.now[:error] = nil
+      flash.now[:notice] = 'Thank you for your message!'
+    else
+      flash.now[:error] = 'Cannot send message.'
+      render :new
+    end
     @order.email = current_user.email
     @order.name = current_user.name
     @order.address_line_1 = current_user.address_line_1
