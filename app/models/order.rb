@@ -12,7 +12,7 @@ class Order < ActiveRecord::Base
 
   def headers
     {
-      :to => "jacksharville@gmail.com",
+      :to => "ops@dms-intl.com",
       :from => "ops@dms-intl.com",
       :subject => "A new order has been placed on the DMS website."
     }
